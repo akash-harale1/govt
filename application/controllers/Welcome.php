@@ -43,7 +43,7 @@ class Welcome extends CI_Controller
 				if ($checkUser) {
 					$this->load->helper('string');
 					$token = random_string('alnum', 10);
-					$this->UserModel->updateLoginToken($token, $checkUser->id);
+					$this->UserModel->updateLoginToken($token, $checkUser->admin_id);
 
 					$this->session->set_userdata("token", $token);
 					redirect("Admin");

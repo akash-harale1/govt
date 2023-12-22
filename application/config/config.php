@@ -23,7 +23,7 @@ date_default_timezone_set("Asia/Calcutta");
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://127.0.0.1:8080/matrubhumi/';
+$config['base_url'] = 'http://localhost/govt/';
 
 /*
 |--------------------------------------------------------------------------

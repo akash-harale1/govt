@@ -27,21 +27,16 @@ class Admin extends CI_Controller
 		$this->load->model('MemberModel');
 
 		if ($this->session->userdata('token')) {
-			$this->userRow = $this->db->query("SELECT * FROM users WHERE logintoken='" . $this->session->userdata('token') . "'")->row();
+			$this->userRow = $this->db->query("SELECT * FROM admin WHERE logintoken='" . $this->session->userdata('token') . "'")->row();
 			if (!$this->userRow)
-				redirect("");
+				redirect("Welcome");
 		} else
-			redirect("");
+			redirect("Welcome");
 	}
 
 	public function index()
 	{
 		$this->header("Dashboard");
-		$toDay = date('Y-m-d');
-		$data['members'] = $this->db->query("SELECT COUNT(*) as cnt FROM members")->row()->cnt;
-		$data['birthday'] = $this->db->query("SELECT COUNT(*) as cnt FROM members WHERE birthday LIKE '$toDay%'")->row()->cnt;
-		$data['ann'] = $this->db->query("SELECT COUNT(*) as cnt FROM members WHERE anniversary LIKE '$toDay%'")->row()->cnt;
-		$data['dann'] = $this->db->query("SELECT COUNT(*) as cnt FROM members WHERE deathann LIKE '$toDay%'")->row()->cnt;
 		$this->load->view('dashboard', @$data);
 		$this->load->view('include/footer');
 	}
