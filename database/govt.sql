@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 22, 2023 at 11:18 AM
+-- Generation Time: Dec 22, 2023 at 12:43 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -31,8 +31,16 @@ CREATE TABLE `admin` (
   `admin_id` bigint(20) NOT NULL,
   `mobile` bigint(20) NOT NULL,
   `email` varchar(40) NOT NULL,
-  `password` varchar(100) NOT NULL
+  `password` varchar(100) NOT NULL,
+  `logintoken` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`admin_id`, `mobile`, `email`, `password`, `logintoken`) VALUES
+(1, 7620160408, 'akash@gmail.com', '1', 'iH7Fht45qv');
 
 -- --------------------------------------------------------
 
@@ -185,7 +193,7 @@ ALTER TABLE `person`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `admin_id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `admin_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `broadcast`
