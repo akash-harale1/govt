@@ -11,10 +11,10 @@
 			<div class="app-header header">
 				<div class="container-fluid">
 					<div class="d-flex">
-						<a class="header-brand" href="index.html">
-							<img src="<?= base_url(); ?>template/logo.jpeg" class="header-brand-img desktop-logo" alt="Amtos logo">
-							<img src="<?= base_url(); ?>template/logo.jpeg" class="header-brand-img mobile-view-logo" alt="Amtos logo">
-						</a><!-- LOGO -->
+						<!-- <a class="header-brand" href="index.html"> -->
+							<!-- <img src="<?= base_url(); ?>template/logo.jpeg" class="header-brand-img desktop-logo" alt="Amtos logo"> -->
+							<!-- <img src="<?= base_url(); ?>template/logo.jpeg" class="header-brand-img mobile-view-logo" alt="Amtos logo"> -->
+						<!-- </a>LOGO -->
 						<a aria-label="Hide Sidebar" class="app-sidebar__toggle" data-toggle="sidebar" href="#"></a><!-- sidebar-toggle-->
 						<div class="d-flex order-lg-2 ml-auto header-right-icons header-search-icon">
 							<div class="">
@@ -30,9 +30,10 @@
 									<i class="fe fe-maximize-2"></i>
 								</a>
 							</div><!-- FULL-SCREEN -->
+
 							<div class="dropdown text-center selector profile-1">
 								<a href="#" data-toggle="dropdown" class="nav-link leading-none d-flex">
-									<span><img src="<?= base_url(); ?>template/assets/images/faces/female/16.jpg" alt="profile-user" class="avatar avatar-sm brround cover-image mb-1 ml-0"></span>
+									<span><img src="<?= base_url(); ?>template/assets/images/logo/logo.jpg" alt="profile-user" class="avatar avatar-sm brround cover-image mb-1 ml-0"></span>
 									<span class=" ml-3 d-none d-lg-block ">
 										<span class="text-white "><?= @$user->name; ?></span>
 									</span>
@@ -65,7 +66,7 @@
 				<div class="app-sidebar__user">
 					<div class="dropdown user-pro-body text-center">
 						<div class="user-pic">
-							<img src="<?= base_url(); ?>template/assets/images/faces/female/16.jpg" alt="user-img" class="avatar-xl rounded-circle mb-1">
+							<img src="<?= base_url(); ?>template/assets/images/logo/logo.jpg" alt="user-img" class="avatar-xl rounded-circle mb-1">
 						</div>
 						<div class="user-info">
 							<h6 class=" mb-1 text-dark"><?= @$user->name; ?></h6>
@@ -78,19 +79,45 @@
 						<a class="side-menu__item" href="<?= base_url(); ?>Admin"><i class="side-menu__icon fa fa-laptop"></i><span class="side-menu__label">Dashboard</span></a>
 					</li>
 					<li class="slide">
-						<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-cogs"></i><span class="side-menu__label">User</span><i class="angle fa fa-angle-right"></i></a>
+						<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-cogs"></i><span class="side-menu__label"> Family</span><i class="angle fa fa-angle-right"></i></a>
 						<ul class="slide-menu">
-							<li><a href="<?= base_url(); ?>Admin/User" class="slide-item"> Add</a></li>
-							<li><a href="<?= base_url(); ?>Admin/UserList" class="slide-item">List</a></li>
+							<li><a href="<?= base_url(); ?>Admin/Family" class="slide-item"> Add</a></li>
+							<li><a href="<?= base_url(); ?>Admin/FamilyList" class="slide-item">List</a></li>
 						</ul>
 					</li>
 					<li class="slide">
-						<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-cogs"></i><span class="side-menu__label">Members</span><i class="angle fa fa-angle-right"></i></a>
+						<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-cogs"></i><span class="side-menu__label"> Person</span><i class="angle fa fa-angle-right"></i></a>
 						<ul class="slide-menu">
-							<li><a href="<?= base_url(); ?>Admin/members" class="slide-item"> Add</a></li>
-							<li><a href="<?= base_url(); ?>Admin/membersList" class="slide-item">List</a></li>
+							<li><a href="<?= base_url(); ?>Admin/Person" class="slide-item"> Add</a></li>
+							<li><a href="<?= base_url(); ?>Admin/PersonList" class="slide-item">List</a></li>
 						</ul>
 					</li>
+
+					<li class="slide">
+						<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-cogs"></i><span class="side-menu__label"> Notification</span><i class="angle fa fa-angle-right"></i></a>
+						<ul class="slide-menu">
+							<li><a href="<?= base_url(); ?>Admin/Notification" class="slide-item"> Add</a></li>
+							<li><a href="<?= base_url(); ?>Admin/NotificationList" class="slide-item">List</a></li>
+						</ul>
+					</li>
+
+
+					<li class="slide">
+						<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-cogs"></i><span class="side-menu__label"> Broadcast</span><i class="angle fa fa-angle-right"></i></a>
+						<ul class="slide-menu">
+							<li><a href="<?= base_url(); ?>Admin/Broadcast" class="slide-item"> Add</a></li>
+							<li><a href="<?= base_url(); ?>Admin/BroadcastList" class="slide-item">List</a></li>
+						</ul>
+					</li>
+
+					<li class="slide">
+						<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-cogs"></i><span class="side-menu__label"> News</span><i class="angle fa fa-angle-right"></i></a>
+						<ul class="slide-menu">
+							<li><a href="<?= base_url(); ?>Admin/News" class="slide-item"> Add</a></li>
+							<li><a href="<?= base_url(); ?>Admin/NewsList" class="slide-item">List</a></li>
+						</ul>
+					</li>
+
 
 				</ul>
 			</aside>

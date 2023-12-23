@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 22, 2023 at 12:43 PM
+-- Generation Time: Dec 23, 2023 at 05:55 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -40,7 +40,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`admin_id`, `mobile`, `email`, `password`, `logintoken`) VALUES
-(1, 7620160408, 'akash@gmail.com', '1', 'iH7Fht45qv');
+(1, 1111111111, 'admin@gmail.com', 'Admin', 'NlUbE7uhGA');
 
 -- --------------------------------------------------------
 
@@ -70,30 +70,6 @@ CREATE TABLE `family` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `members`
---
-
-CREATE TABLE `members` (
-  `id` int(11) NOT NULL,
-  `iddate` datetime NOT NULL,
-  `name` text NOT NULL,
-  `marathi_name` text NOT NULL,
-  `contact` text NOT NULL,
-  `birthday` date NOT NULL,
-  `anniversary` date NOT NULL,
-  `deathann` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `members`
---
-
-INSERT INTO `members` (`id`, `iddate`, `name`, `marathi_name`, `contact`, `birthday`, `anniversary`, `deathann`) VALUES
-(1, '2023-06-01 18:16:03', 'Dhiraj', 'Dhiraj', '9890093759', '2023-06-01', '2023-06-01', '2023-06-01');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `news`
 --
 
@@ -111,7 +87,7 @@ CREATE TABLE `news` (
 --
 
 CREATE TABLE `notification` (
-  `notification_id` varchar(60) NOT NULL,
+  `notification_id` int(11) NOT NULL,
   `header` text NOT NULL,
   `text` text NOT NULL,
   `person_id` bigint(20) NOT NULL
@@ -160,12 +136,6 @@ ALTER TABLE `family`
   ADD PRIMARY KEY (`family_id`);
 
 --
--- Indexes for table `members`
---
-ALTER TABLE `members`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `news`
 --
 ALTER TABLE `news`
@@ -205,25 +175,25 @@ ALTER TABLE `broadcast`
 -- AUTO_INCREMENT for table `family`
 --
 ALTER TABLE `family`
-  MODIFY `family_id` bigint(20) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `members`
---
-ALTER TABLE `members`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `family_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `news_id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `news_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `notification`
+--
+ALTER TABLE `notification`
+  MODIFY `notification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `person`
 --
 ALTER TABLE `person`
-  MODIFY `person_id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `person_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables

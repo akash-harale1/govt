@@ -10,8 +10,8 @@
 						</span>
 					</div>
 					<div class="float-right text-right">
-						<p class="card-text text-muted font-weight-semibold mb-1">Total Members</p>
-						<h2 class="mb-0"><?=@$members;?></h2>
+						<p class="card-text text-muted font-weight-semibold mb-1">Total Families</p>
+						<h2 class="mb-0"><?= @$family; ?></h2>
 					</div>
 				</div>
 			</div>
@@ -28,8 +28,8 @@
 						</span>
 					</div>
 					<div class="float-right text-right">
-						<p class="card-text text-muted font-weight-semibold mb-1">Today Birthday </p>
-						<h2 class="mb-0"><?=@$birthday;?></h2>
+						<p class="card-text text-muted font-weight-semibold mb-1">Total Persons </p>
+						<h2 class="mb-0"><?= @$person; ?></h2>
 					</div>
 				</div>
 			</div>
@@ -46,8 +46,8 @@
 						</span>
 					</div>
 					<div class="float-right text-right">
-						<p class="card-text text-muted font-weight-semibold mb-1">Today Anniversary</p>
-						<h2 class="mb-0"><?=@$ann;?></h2>
+						<p class="card-text text-muted font-weight-semibold mb-1">Total Notifications</p>
+						<h2 class="mb-0"><?= @$notification; ?></h2>
 					</div>
 				</div>
 			</div>
@@ -64,14 +64,13 @@
 						</span>
 					</div>
 					<div class="float-right text-right">
-						<p class="card-text text-muted font-weight-semibold mb-1">Today Death Ann.</p>
-						<h2 class="mb-0"><?=@$dann;?></h2>
+						<p class="card-text text-muted font-weight-semibold mb-1">Total Broadcasts</p>
+						<h2 class="mb-0"><?= @$broadcast; ?></h2>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- COL END 
 	<div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
 		<div class="card card-img-holder">
 			<div class="card-body list-type">
@@ -82,14 +81,13 @@
 						</span>
 					</div>
 					<div class="float-right text-right">
-						<p class="card-text text-muted font-weight-semibold mb-1">Total Firm</p>
-						<h2 class="mb-0">1</h2>
+						<p class="card-text text-muted font-weight-semibold mb-1">Total News</p>
+						<h2 class="mb-0"><?= @$news; ?></h2>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>-->
-	<!-- COL END -->
+	</div>
 </div>
 
 
